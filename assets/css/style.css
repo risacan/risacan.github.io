@@ -43,3 +43,7 @@ a:hover {
     position: relative;
     top: -13px;
 }
+
+.hide {
+    display: none;
+}
