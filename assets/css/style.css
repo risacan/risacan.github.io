@@ -5,3 +5,41 @@
 header {
     margin-bottom: 0;
 }
+
+.name-image {
+    width: 500px;
+    margin-left: -30px;
+    margin-bottom: -30px;
+
+}
+
+.name-image-link {
+    text-decoration: none;
+}
+
+nav {
+    margin: 30px 0;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+.hr {
+    border: none;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    margin: 30px;
+}
+
+.hr:after {
+    content: "";
+    background-image: url(../images/hr.png);
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    padding: 0 48px;
+    position: relative;
+    top: -13px;
+}

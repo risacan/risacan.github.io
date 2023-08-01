@@ -2,23 +2,31 @@
 <html>
 
 <head>
-    <title>risa harada</title>
+    <title>risa</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🦔</text></svg>">
-    <link href="https://unpkg.com/risa.css@latest" rel="stylesheet" type="text/css">
+    <!-- <link href="https://unpkg.com/risa.css@latest" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="/assets/css/risa.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
     <script>{% include index.js %}</script>
 </head>
 
 <body>
     <header>
-        <h1 class="h1">{{ page.title }}</h1>
+        <a class="name-image-link" href="/">
+            <img src="assets/images/myname.png" alt="RISA WATANABE HARADA" class="name-image">
+        </a>
     </header>
     <main>
         {{ content }}
     </main>
     <footer>
-        This website is highly inspired by <a href="https://muan.co/">Mu-An Chiou</a>
+        <p></p>This website is highly inspired by <a href="https://muan.co/">Mu-An Chiou</a></p>
+
     </footer>
 </body>
 
