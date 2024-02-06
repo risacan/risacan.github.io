@@ -62,3 +62,9 @@ blockquote {
     padding: 1em 1em 1em 2.5em;
     margin: 0;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
