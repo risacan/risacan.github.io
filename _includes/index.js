@@ -13,7 +13,7 @@ fetch('https://risacan.net/status/index.txt')
         console.error(error);
     });
 
-function timeAgo(dateStr) {
+function timeAgo(dateStr, lang) {
     const date = new Date(dateStr);
     const now = new Date();
     const diff = now - date;
@@ -21,14 +21,18 @@ function timeAgo(dateStr) {
     const diffInMinutes = diffInSeconds / 60;
     const diffInHours = diffInMinutes / 60;
     const diffInDays = diffInHours / 24;
+    const langDiffInSeconds = lang == 'ja' ? '秒前' : 'seconds ago';
+    const langDiffInMinutes = lang == 'ja' ? '分前' : 'minutes ago';
+    const langDiffInHours = lang == 'ja' ? '時間前' : 'hours ago';
+    const langDiffInDays = lang == 'ja' ? '日前' : 'days ago';
 
     if (diffInSeconds < 60) {
-        return Math.round(diffInSeconds) + '秒前';
+        return Math.round(diffInSeconds) + langDiffInSeconds;
     } else if (diffInMinutes < 60) {
-        return Math.round(diffInMinutes) + '分前';
+        return Math.round(diffInMinutes) + langDiffInMinutes;
     } else if (diffInHours < 24) {
-        return Math.round(diffInHours) + '時間前';
+        return Math.round(diffInHours) + langDiffInHours;
     } else {
-        return Math.round(diffInDays) + '日前';
+        return Math.round(diffInDays) + langDiffInDays;
     }
 }
