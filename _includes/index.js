@@ -7,7 +7,13 @@ fetch('https://risacan.net/status/index.txt')
         const spanStatus = document.getElementById("status");
         spanStatus.innerHTML = secondLine;
         const spanWhen = document.getElementById("statusWhen");
-        spanWhen.innerHTML = timeAgo(firstLine);
+        const spanWhenJp = document.getElementById("statusWhenJp");
+
+        if (spanWhen) {
+            spanWhen.innerHTML = timeAgo(firstLine, "");
+        } else if (spanWhenJp) {
+            spanWhenJp.innerHTML = timeAgo(firstLine, "ja");
+        }
     })
     .catch(error => {
         console.error(error);
